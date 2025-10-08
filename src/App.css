@@ -1223,7 +1223,7 @@ html {
   }
 
   .skillsMainBox {
-    width: 300px;
+    width: 350px;
   }
 
   .hireMeImage {
@@ -1234,7 +1234,25 @@ html {
     display: none;
   }
 
+  .contactText {
+    width: 350px;
+  }
+
+  .contactButton {
+    width: 370px;
+  }
+
+  .projectsMainBox {
+    width: 350px;
+    height: 400px;
+  }
+
+  .projectsImage {
+    width: 350px;
+    height: 150px;
+  }
 }
+
 
 @media (max-width: 480px) {
   .myName {
