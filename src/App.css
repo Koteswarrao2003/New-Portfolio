@@ -1,38 +1,1271 @@
-.App {
+/* App.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* prevents horizontal scroll */
+}
+
+
+.welcomeMain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff7700, #ffbb33);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.welcomeContent {
   text-align: center;
+  color: white;
+  animation: zoomIn 1.5s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.welcomeText {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  animation: pulse 2s infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.welcomeSubText {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #fff700;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  width: 80%;
+  height: 75px;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 50px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.linkHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 75px;
+  border-radius: 40px;
+  transition: background-color 0.3s;
+}
+
+.linkHome:hover {
+  /* background-color: rgb(39, 38, 38); */
+  background-color: rgb(57, 56, 56);
+  cursor: pointer;
+  width: 150px;
+  height: 60px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+/* .linkHome a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+} */
+
+.linkHome a.active {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(255, 119, 0);
+  width: 150px;
+  height: 60px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+
+}
+
+
+/* .navActive {
+    background-color: rgb(255, 119, 0);
+    border-radius: 40px;
+    color: white;
+    width: 150px;
+    height: 60px;
+    border-radius: 40px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navUnActive {
+    color: white;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.section {
+  width: 100%;
+  scroll-margin-top: 80px;
+  overflow: hidden;
+  /* prevents children from overflowing */
+  position: relative;
+}
+
+.logoName {
+  background-color: rgb(255, 119, 0);
+  border-radius: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  font-weight: bold;
+}
+
+.logoMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logoText {
+  font-weight: 300px;
 }
 
-@keyframes App-logo-spin {
+.mainHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.hello {
+  border: 2px solid grey;
+  margin: 10px;
+  padding: 10px;
+  width: 80px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.myName {
+  font-size: 450%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  overflow: hidden;
+  margin-top: -100px;
+}
+
+.spanOne {
+  color: rgb(255, 119, 0);
+  font-weight: 500;
+}
+
+.imageDiv {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-top: -80px;
+  justify-content: space-evenly;
+}
+
+.imageText {
+  font-size: medium;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.imageText2 {
+  font-size: x-large;
+  font-weight: bold;
+  color: rgb(255, 119, 0);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.iFa {
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.iFa:hover {
+  transform: scale(1.02);
+}
+
+.aboutMain {
+  display: flex;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutMainLeft {
+  width: 100%;
+  height: 100%;
+  max-height: 800px;
+
+}
+
+.aboutMainLeftSub {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.aboutImage {
+  height: 400px;
+  border-radius: 20px;
+}
+
+.aboutMainRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-size: x-large;
+  margin-top: 20px;
+  margin-right: 30px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.aboutHeading {
+  color: rgb(255, 119, 0);
+  font-size: xx-large;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.aboutSpan {
+  /* color: rgb(255, 119, 0); */
+  color: lightskyblue;
+  font-size: x-large;
+  /* font-weight: bold; */
+  font-style: italic;
+}
+
+.aboutButton {
+  position: relative;
+  padding: 10px;
+  width: 200px;
+  border-radius: 50px;
+  border: 1px solid white;
+  background: linear-gradient(to right, #ff7700, #ffbb33);
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+
+.aboutButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ffbb33, #ff7700);
+  transition: all 0.8s ease;
+  z-index: -1;
+}
+
+.aboutButton:hover::before {
+  left: 0;
+}
+
+
+.skillsMainTop {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skillsMainBox {
+  text-align: center;
+  background: linear-gradient(135deg, #24c6dc, #514a9d);
+  /* background: linear-gradient(135deg, #667eea, #764ba2); */
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+
+}
+
+.skillsMain {
+  margin-top: 20px;
+}
+
+.skillsMainHeading {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.skillsSpan {
+  color: rgb(255, 119, 0);
+  font-weight: bold;
+}
+
+.skillsMainDomain {
+  font-size: large;
+  font-weight: bolder;
+}
+
+/* .skillsMainBottom{
+    display: flex;
+}
+
+.skillsMainBottomRight{
+    display: flex;
+   
+}
+
+.Bars {
+    color: black;
+    flex: 1;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 3% 5%;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.label {
+    width: 100px;
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.progress {
+    background-color: rgb(237, 233, 233);
+    flex: 1;
+    border: 1px solid grey;
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    background: linear-gradient(to right, #ffbb33, #ff7700);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+} */
+
+
+.skillPro {
+  text-align: center;
+  margin-top: 50px;
+  font-size: large;
+}
+
+.skillProSpan {
+  color: #ff7700;
+  font-size: xx-large;
+}
+
+.skillsMainBottom2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.skillsMainBottomLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillsCode {
+  /* background: linear-gradient(135deg, #24c6dc, #514a9d); */
+  /* color: rgb(255, 119, 0); */
+  /* color: linear-gradient(to right, #24c6dc, #514a9d); */
+  color: #514a9d;
+  font-size: 100px;
+}
+
+.fsd {
+  font-size: large;
+  text-align: center;
+}
+
+.skillsMainBottomRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.Bars {
+  color: black;
+  flex: 1;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+
+  display: flex;
+  justify-content: space-evenly;
+  width: 800px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.label {
+  width: 80px;
+  text-align: left;
+}
+
+.progress {
+  background-color: rgb(237, 233, 233);
+  flex: 1;
+  border: 1px solid grey;
+  height: 12px;
+  border-radius: 10px;
+  /* overflow: hidden; */
+}
+
+.fill {
+  background: linear-gradient(to right, #ffbb33, #ff7700);
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+.projectsMain {
+  text-align: center;
+  /* background-color: aliceblue; */
+  /* color: #000; */
+  /* background-color: #000; */
+  background: linear-gradient(135deg, grey, black, grey);
+  color: #ffff;
+
+}
+
+.projectsText {
+  font-size: x-large;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.projectsMainSub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.projectsMainSub2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 100px;
+
+}
+
+.projectsMainBox {
+  width: 100%;
+  height: 100%;
+  /* max-width: 70%;
+    max-height: 70%; */
+  text-align: justify;
+  width: 300px;
+  height: 400px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #24c6dc, #514a9d);
+  border-radius: 10px;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+/* .projectsMainBox:hover{
+    background: linear-gradient(135deg, #514a9d, #24c6dc);
+} */
+
+.projectsImage {
+  width: 300px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.projectButton {
+  position: relative;
+  padding: 8px;
+  width: 200px;
+  border-radius: 50px;
+  border: 1px solid white;
+  background: linear-gradient(to right, #ff7700, #ffbb33);
+  color: white;
+  font-size: large;
+  cursor: pointer;
+  font-weight: bold;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+
+.projectButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ffbb33, #ff7700);
+  transition: all 0.8s ease;
+  z-index: -1;
+}
+
+.projectButton:hover::before {
+  left: 0;
+}
+
+
+.projectName {
+  font-size: large;
+  font-weight: bold;
+}
+
+.contactMain {
+  text-align: center;
+  color: white;
+  background-color: #000;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.contactMainSub {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.contactMainText {
+  font-size: x-large;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.contactMainSubLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.contactMainSubLeftBox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  width: 100%;
+}
+
+.contactMainSubLeftBox svg {
+  font-size: 26px;
+  /* color: #0560c1; */
+  /* color: #6f64f2; */
+  /* color: #24c6dc;
+  color: linear-gradient */
+  /* color: darkorange; */
+  color: #25d366;
+  ;
+
+
+}
+
+.contactPhoneIcon {
+  rotate: 90deg;
+}
+
+.contactMainSubLeftInf {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* line-height: 1.4; */
+}
+
+.identifier {
+  color: white;
+  margin: 0;
+  font-size: large;
+
+}
+
+
+.idValue {
+  color: white;
+  margin: 0;
+  font-size: medium;
+
+}
+
+.contactIcons {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.contactIconsIcon {
+  font-size: x-large;
+  color: #ffff;
+  transition: all 0.3s ease;
+}
+
+.contactIconsIcon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+.contactMainSubRight {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contactField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+.contactLabel {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 0;
+}
+
+.contactText {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #111;
+  color: #fff;
+}
+
+.contactText:focus {
+  /* border-color: #007bff;
+  box-shadow: 10 10 15px #514a9d; */
+  /* border-color: yellow;
+  box-shadow: 0 0 10px orange; */
+  /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); */
+
+  outline: none;
+  border-color: #00bfff;
+  box-shadow: 0 0 8px #00bfff, 0 0 5px #007bff;
+  transition: 0.3s ease;
+}
+
+.contactButton {
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  width: 480px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background: linear-gradient(to right, #ff7700, #ffbb33);
+  color: white;
+  font-size: large;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.5s ease;
+  z-index: 1;
+}
+
+.contactButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ffbb33, #ff7700);
+  transition: all 0.8s ease;
+  z-index: -1;
+}
+
+.contactButton:hover::before {
+  left: 0;
+}
+
+
+.contactFooter {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contactFooterSpan {
+  color: #ff7700;
+  font-size: large;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* .hireMeMain{
+  padding: 100px;
+} */
+
+.hireMeMainText {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.hireMeMainSpan {
+  font-weight: bold;
+  color: #ff7700;
+}
+
+.hireMeMainSub {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: large;
+}
+
+.hireMeMainSubLeft {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hireMeSkill {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.hireMeAnd {
+  color: #ff7700;
+}
+
+.hireMeSpanCount {
+  font-size: x-large;
+}
+
+.hireMeSubLeftSkillParts {
+  display: flex;
+  gap: 50px;
+  justify-content: start;
+  align-items: start;
+
+}
+
+.hireMeButton {
+  position: relative;
+  padding: 10px;
+  width: 200px;
+  border-radius: 50px;
+  border: 1px solid white;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  font-size: large;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+
+.hireMeButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  transition: all 0.8s ease;
+  z-index: -1;
+}
+
+.hireMeButton:hover::before {
+  left: 0;
+}
+
+
+.hireMeImage {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+
+.successMessage {
+  color: #00ff7f;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(10px);
   }
+
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contactButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+
+@media (max-width: 1024px) {
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    height: auto;
+    max-width: 95%;
+    padding: 10px 0;
+
+  }
+
+  .link {
+    width: auto;
+    padding: 10px 15px;
+  }
+
+  .myName {
+    font-size: 300%;
+    text-align: center;
+    margin-top: -50px;
+  }
+
+  .imageDiv {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  .imageSectionCenter img {
+    width: 250px;
+    height: auto;
+  }
+
+  .mainHome {
+    margin-top: 20px;
+  }
+
+  .skillsMainBox {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #24c6dc, #514a9d);
+    /* background: linear-gradient(135deg, #667eea, #764ba2); */
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+  }
+
+  .projectsMainBox {
+    width: 100%;
+    height: 100%;
+    /* max-width: 70%;
+    max-height: 70%; */
+    text-align: justify;
+    width: 250px;
+    height: 450px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #24c6dc, #514a9d);
+    border-radius: 8px;
+    color: white;
+    transition: all 0.5s ease;
+  }
+
+  /* .projectsMainBox:hover{
+    background: linear-gradient(135deg, #514a9d, #24c6dc);
+} */
+
+  .hireMeP{
+    white-space: nowrap;
+  }
+
+  .hireMeImage{
+    width: 300px;
+    height: 300px;
+  }
+
+  .projectsImage {
+    width: 250px;
+    height: 100px;
+    border-radius: 5px;
+  }
+
+  .projectName{
+    text-align: center;
+  }
+
+
+}
+
+
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    width: auto;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    /* position: absolute;
+    top: 5px;
+    left: 0;
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease; */
+    display: none;
+  }
+
+  /* .nav-links.active {
+    height: 300px;
+  }
+
+  .nav-links .link {
+    margin: 15px 0;
+  }
+
+  .link {
+    width: 100%;
+    text-align: center;
+    height: 60px;
+  } */
+
+
+  /* .mainHome {
+    text-align: center;
+  } */
+
+  .hello {
+    width: 60px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .mainHome {
+    margin-top: -100px;
+  }
+
+  .myName {
+    font-size: 200%;
+    text-align: center;
+    margin-top: -30px;
+  }
+
+  .imageDiv {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .imageText {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .imageSectionCenter {
+    width: 100%;
+    height: 100%;
+  }
+
+  .imageSectionCenter img {
+    width: 500px;
+    height: auto;
+    padding: 2px;
+  }
+
+  .imageText2 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .aboutMain {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .aboutMainLeft {
+    display: none;
+  }
+
+
+  .skillsMainTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .Bars {
+    width: 320px;
+    padding: 10px;
+  }
+
+  .projectsMainSub2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: -1500px;
+  }
+
+  .contactMainSub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contactMainSubRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    width: auto;
+
+  }
+
+  .contactMainSubLeft {
+    width: auto;
+  }
+
+  .contactText {
+    width: 300px;
+  }
+
+  .contactButton {
+    width: 320px;
+
+  }
+
+  .hireMeMainSub {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .hireMeMainSubRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .skillsMainBox {
+    width: 300px;
+  }
+
+  .hireMeImage {
+    display: none;
+  }
+
+  .hireMeP {
+    display: none;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .myName {
+    font-size: 160%;
+    margin-top: -10px;
+  }
+
+  .mainHome {
+    margin-top: -100px;
+  }
+
+  .hello {
+    font-size: 12px;
+    width: 55px;
+    height: 22px;
+  }
+
+  .imageSectionCenter img {
+    width: 160px;
+  }
+
+  .imageText {
+    font-size: 14px;
+  }
+
+  .socialIcons a svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .imageText2 {
+    font-size: 18px;
   }
 }
